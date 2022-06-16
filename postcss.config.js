@@ -1,11 +1,12 @@
 module.exports = {
     plugins: [
-        require('postcss-import'),
-        require('postcss-url'),
         require('postcss-preset-env')({
-            stage: 1,
+            stage: 0,
+            browsers: 'last 2 versions'
         }),
+        require('postcss-import'),
         require('postcss-nested'),
-        require('autoprefixer'),
+        // require('postcss-url'),
+        // require('autoprefixer'),
     ],
 };
