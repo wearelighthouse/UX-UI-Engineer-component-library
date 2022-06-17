@@ -1,0 +1,17 @@
+.header {
+    background-color: yellow;
+    padding: 2rem;
+    border: 2px solid red;
+    margin: 1rem;
+  
+    &-p {
+      color: red;
+      font-size: 3rem;
+    }
+  
+    &-button {
+      padding: 2rem;
+      background-color: brown;
+    }
+}
+  

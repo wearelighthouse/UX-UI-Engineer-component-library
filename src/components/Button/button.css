@@ -1,7 +1,51 @@
 .storybook-button {
-    border: 2px solid red;
-    padding: 1rem;
-    background-color: blue;
-    border-radius: 10px;
-    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.storybook-button--default {
+    background: #E0E0E0;
+    color: #3F3F3F;
+}
+.storybook-button--default:hover {
+    background: #AEAEAE;
+}
+
+.storybook-button--primary {
+    background: #009CDE;
+    color: #FFFFFF;
+}
+.storybook-button--primary:hover {
+    background: #108EC7;
+}
+
+.storybook-button--secondary {
+    color: #E0E0E0;
+    background: #455A64;
+}
+
+.storybook-button--secondary:hover {
+    background: #1C313A;
+}
+
+.storybook-button--large {
+    padding: 11px 25px;
+}
+
+.storybook-button--medium {
+    padding: 9px 20px;
+}
+
+.storybook-button--small {
+    padding: 7px 16px;
+}
+
+.storybook-button--disabled:hover,
+.storybook-button--disabled {
+    color: #9E9E9E;
 }

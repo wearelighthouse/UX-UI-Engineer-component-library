@@ -1,0 +1,10 @@
+.footer {
+    background-color: cyan;
+    margin: 1rem;
+    padding: 2rem;
+
+    &-p {
+        font-size: 2rem;
+        color: hotpink;
+    }
+}
