@@ -6,25 +6,32 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
+    cursor: pointer;
 }
 
+.storybook-button--disabled,
 .storybook-button--primary:disabled:hover,
 .storybook-button--secondary:disabled:hover,
-.storybook-button:disabled:hover,
 .storybook-button--primary:disabled,
-.storybook-button--secondary:disabled,
-.storybook-button:disabled {
+.storybook-button--secondary:disabled {
     color: #9E9E9E;
     background-color: #E0E0E0;
     cursor: not-allowed;
 }
 
-.storybook-button--default {
-    background: #E0E0E0;
+.storybook-button--text {
+    background-color: transparent;
     color: #3F3F3F;
 }
-.storybook-button--default:hover {
-    background: #AEAEAE;
+.storybook-button--text:hover {
+    color: #1C313A;
+    opacity: 0.5;
+}
+
+.storybook-button--text:disabled,
+.storybook-button--text:hover {
+    background-color: transparent;
+    opacity: unset;
 }
 
 .storybook-button--primary {
@@ -44,14 +51,14 @@
     background: #1C313A;
 }
 
-.storybook-button--large {
+.storybook-button--lg {
     padding: 11px 25px;
 }
 
-.storybook-button--medium {
+.storybook-button--md {
     padding: 9px 20px;
 }
 
-.storybook-button--small {
+.storybook-button--sm {
     padding: 7px 16px;
 }

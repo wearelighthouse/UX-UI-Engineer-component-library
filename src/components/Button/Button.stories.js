@@ -1,5 +1,4 @@
 import React from 'react';
-import { withKnobs, text, select, boolean, object } from '@storybook/react';
 
 import Button from './Button';
 
@@ -8,13 +7,13 @@ export default {
     component: Button,
     argTypes: {
         variant: {
-            options: ['default', 'primary', 'secondary'],
+            options: ['text', 'primary', 'secondary'],
             control: {
                 type: 'select'
             }
         },
         size: {
-            options: ['large', 'medium', 'small'],
+            options: ['lg', 'md', 'sm'],
             control: {
                 type: 'select'
             }
@@ -24,18 +23,18 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-    children: 'Default button',
-    size: 'large',
-    variant: 'default',
+export const Text = Template.bind({});
+Text.args = {
+    children: 'Text button',
+    size: 'lg',
+    variant: 'text',
     disabled: false,
 }
 
 export const Primary = Template.bind({});
 Primary.args = {
     children: 'Primary button',
-    size: 'large',
+    size: 'lg',
     variant: 'primary',
     disabled: false,
 }
@@ -43,32 +42,8 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
     children: 'Secondary Button',
-    size: 'large',
+    size: 'lg',
     variant: 'secondary',
-    disabled: false,
-}
-
-export const Large = Template.bind({});
-Large.args = {
-    children: 'Large Button',
-    size: 'large',
-    variant: 'primary',
-    disabled: false,
-}
-
-export const Medium = Template.bind({});
-Medium.args = {
-    children: 'Medium Button',
-    size: 'medium',
-    variant: 'secondary',
-    disabled: false,
-}
-
-export const Small = Template.bind({});
-Small.args = {
-    children: 'Small Button',
-    size: 'small',
-    variant: 'primary',
     disabled: false,
 }
 
@@ -76,5 +51,5 @@ export const Desabled = Template.bind({});
 Desabled.args = {
     disabled: true,
     children: 'Disabled Button',
-    size: 'large',
+    size: 'lg',
 }
