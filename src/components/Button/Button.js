@@ -1,19 +1,16 @@
 import React from 'react'
 import './button.css';
 
-const Button = ({variant, disabled, backgroundColor, size, color, label, ...props}) => {
-  const isDisabled = disabled === true && 'storybook-button--disabled';
+const Button = ({variant, disabled, size, children, ...props}) => {
 
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${color}`, `storybook-button--${size}`, `storybook-button--${variant}`, `${isDisabled}`].join(' ')}
-      style={backgroundColor && {backgroundColor}}
-      {...props}
+      className={`storybook-button storybook-button--${size} storybook-button--${variant}`}
       disabled={disabled}
-      color={color}
+      {...props}
     >
-      {label}
+      {children}
     </button>
   );
 }

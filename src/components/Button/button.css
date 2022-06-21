@@ -8,6 +8,17 @@
     line-height: 24px;
 }
 
+.storybook-button--primary:disabled:hover,
+.storybook-button--secondary:disabled:hover,
+.storybook-button:disabled:hover,
+.storybook-button--primary:disabled,
+.storybook-button--secondary:disabled,
+.storybook-button:disabled {
+    color: #9E9E9E;
+    background-color: #E0E0E0;
+    cursor: not-allowed;
+}
+
 .storybook-button--default {
     background: #E0E0E0;
     color: #3F3F3F;
@@ -43,9 +54,4 @@
 
 .storybook-button--small {
     padding: 7px 16px;
-}
-
-.storybook-button--disabled:hover,
-.storybook-button--disabled {
-    color: #9E9E9E;
 }
