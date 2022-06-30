@@ -1,9 +1,10 @@
 import React from 'react';
-import { Search, AtSign, ChevronDown, ShoppingCart } from 'react-feather';
+import { Search, ShoppingCart, Delete, X } from 'react-feather';
  
 const icons = {
     'search': Search,
-    'shopping-card': ShoppingCart
+    'shopping-card': ShoppingCart,
+    'delete': X
 };
 
 const Icon = ({ id, size, strokeWidth = 1, ...delegated }) => {

@@ -54,3 +54,9 @@
     display: flex;
     gap: 2rem;
 }
+
+.x-close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
