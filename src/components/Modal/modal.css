@@ -18,20 +18,39 @@
 }
 
 .modal__content {
-    width: 500px;
-    margin: 15% auto;
+    max-width: 500px;
     background-color: #fff;
     border-radius: 5px;
     position: relative;
     transform: inherit;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-100px);
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .modal.active .modal__content {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.close__modal {
+    margin-left: auto;
+}
+
+.modal__p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.modal__buttons {
+    display: flex;
+    gap: 2rem;
 }
