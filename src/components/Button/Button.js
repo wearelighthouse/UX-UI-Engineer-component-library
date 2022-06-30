@@ -1,7 +1,7 @@
 import React from 'react'
 import './button.css';
 
-const Button = ({variant, disabled, size, children, ...props}) => {
+const Button = ({variant, disabled, size, children, onClick, ...props}) => {
   const isDisable = disabled ? 'storybook-button--disabled' : '';
 
   return (
@@ -9,6 +9,7 @@ const Button = ({variant, disabled, size, children, ...props}) => {
       type="button"
       className={`storybook-button storybook-button--${size} storybook-button--${variant} ${isDisable}`}
       disabled={disabled}
+      onClick={onClick}
       {...props}
     >
       {children}
