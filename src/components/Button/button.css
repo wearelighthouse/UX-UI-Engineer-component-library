@@ -7,13 +7,16 @@
     font-size: 16px;
     line-height: 24px;
     cursor: pointer;
+    position: relative;
 }
 
 .storybook-button--disabled,
 .storybook-button--primary:disabled:hover,
 .storybook-button--secondary:disabled:hover,
+.storybook-button--danger:disabled:hover,
 .storybook-button--primary:disabled,
-.storybook-button--secondary:disabled {
+.storybook-button--secondary:disabled,
+.storybook-button--danger:disabled {
     color: #9E9E9E;
     background-color: #E0E0E0;
     cursor: not-allowed;
@@ -35,20 +38,29 @@
 }
 
 .storybook-button--primary {
-    background: #009CDE;
+    background: rgb(0,156,222);
     color: #FFFFFF;
 }
 .storybook-button--primary:hover {
-    background: #108EC7;
+    background: rgba(0,156,222, 0.8);
 }
 
 .storybook-button--secondary {
     color: #E0E0E0;
-    background: #455A64;
+    background: rgb(69,90,100);
 }
 
 .storybook-button--secondary:hover {
-    background: #1C313A;
+    background: rgba(69,90,100, 0.8);
+}
+
+.storybook-button--danger {
+    color: #FFFFFF;
+    background: rgb(217, 83, 79);
+}
+
+.storybook-button--danger:hover {
+    background: rgba(217, 83, 79, 0.8);
 }
 
 .storybook-button--lg {
@@ -61,4 +73,28 @@
 
 .storybook-button--sm {
     padding: 7px 16px;
+}
+
+.left__icon span {
+    padding-left: 2.5rem;
+}
+
+.icon__wrapper {
+    position: absolute;
+    left: 0;
+    padding-left: 25px;
+}
+
+.right__icon {
+    position: relative;
+}
+
+.right__icon span {
+    padding-right: 2.5rem;
+}
+
+.right-icon__wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;   
 }
