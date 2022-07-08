@@ -3,7 +3,8 @@ import { Search, AtSign, ChevronDown, ShoppingCart } from 'react-feather';
  
 const icons = {
     'search': Search,
-    'shopping-card': ShoppingCart
+    'shopping-card': ShoppingCart,
+    'at-sign': AtSign
 };
 
 const Icon = ({ id, size, strokeWidth = 1, ...delegated }) => {
