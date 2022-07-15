@@ -9,7 +9,7 @@ const Styles = {
       fontSize: 14,
       lineHeight: 16,
       paddingV: 4,
-      paddingH: 20,
+      paddingH: 26,
       top: 4
     },
     md: {
@@ -18,7 +18,7 @@ const Styles = {
       fontSize: 18,
       lineHeight: 21,
       paddingV: 8,
-      paddingH: 28,
+      paddingH: 34,
       top: 8
     },
     lg: {
@@ -27,12 +27,12 @@ const Styles = {
         fontSize: 22,
         lineHeight: 28,
         paddingV: 12,
-        paddingH: 36,
+        paddingH: 44,
         top: 12
       }
   }
 
-const SearchInput = ({ placeholder, label, icon, size, width = 250, outline, ...props}) => {
+const SearchInput = ({ placeholder, label, icon, size, width = 250, outline, onChange, ...props}) => {
     const styles = Styles[size];
     const outlined = outline === 'outline' ? 'none' : styles.border + "px" + ' ' + 'solid' + ' ' + 'grey';
 
@@ -48,10 +48,18 @@ const SearchInput = ({ placeholder, label, icon, size, width = 250, outline, ...
     <div className={`wrapper wrapper-${outline}`} style={{borderBottom: outlined}}>
       <span className="span">{label}</span>
       {icon && <IconWrapper />}
-        <input className={`input-element input-element_${outline} ${icon ? '' : 'input-elemenent_noicon'}`}
-            style={{fontSize: styles.fontSize + "px", lineHeight: styles.lineHeight + "px", width: width + "px", paddingTop: styles.paddingV + "px", paddingBottom: styles.paddingV + "px", paddingLeft: styles.paddingH + "px"}}
+        <input className={`input-element input-element_${outline}`}
+            style={{
+              fontSize: styles.fontSize + "px", 
+              lineHeight: styles.lineHeight + "px", 
+              width: width + "px", 
+              paddingTop: styles.paddingV + "px", 
+              paddingBottom: styles.paddingV + "px", 
+              paddingLeft: icon ? styles.paddingH + "px" : (styles.paddingH - 16) + "px"
+            }}
             type="text"
             placeholder={placeholder}
+            onChange={onChange}
         />
     </div>
   )

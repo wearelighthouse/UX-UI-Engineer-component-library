@@ -26,7 +26,6 @@
 .input-element::placeholder {
     font-weight: 400;
     color: hsl(0deg 0% 50%);
-    padding-left: 0.5rem;
 }
 
 .input-element:hover {
@@ -39,12 +38,4 @@
 
 .input-element_outline {
     border: 2px solid gray;
-}
-
-.input-elemenent_noicon {
-    padding-left: 0;
-}
-
-.input-elemenent_noicon::placeholder {
-    padding-left: 0;
 }
