@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button/Button";
 import LinkCards from "./LinkCards";
 
 export default {
@@ -22,6 +23,11 @@ const MapLinkCards = () => {
                     <article className="card">
                         <h2>{card.name}</h2>
                         <p>{card.description}</p>
+
+                        <div className="button-links">
+                            <Button variant="primary">Previous</Button>
+                            <Button variant="primary">Next</Button>
+                        </div>
                     </article>
                 </a>
             ))}
