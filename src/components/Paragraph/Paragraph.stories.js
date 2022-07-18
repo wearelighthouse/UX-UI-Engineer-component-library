@@ -2,14 +2,10 @@ import React from 'react';
 import Button from '../Button/Button';
 import Paragraph from './Paragraph';
 
-import { hexToRgb, luminance } from './Paragraph';
-
 export default {
     title: 'Components/Paragraph',
     Component: Button
 }
-
-
 
 const Template = (args) => <Paragraph {...args} />
 
