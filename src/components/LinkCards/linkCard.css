@@ -14,16 +14,29 @@
     text-decoration: none;
     box-shadow: 0 1px 10px rgb(0 0 0 / 8%);
     transition: box-shadow .2s;
+    height: 100%;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    min-height: 200px;
+    justify-content: space-between;
     background: white;
     border-radius: 4px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
+}
+
+.card-link:focus, .button-links button:focus {
+    outline-offset: .2rem;
+    outline-style: dotted;
+}
+
+.card p, .card h2 {
+    margin: 0;
+}
+
+.card p {
+    padding: 1.5rem 0rem;
 }
 
 .card-link:hover .card h2 {
