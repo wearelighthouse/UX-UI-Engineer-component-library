@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './modal.css'
-import Button from '../Button/Button';
 
 const Modal = ({children, ...props}) => {
 

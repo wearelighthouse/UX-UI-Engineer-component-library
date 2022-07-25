@@ -1,9 +1,10 @@
 import React from 'react';
-import { Search, ShoppingCart, Delete, X } from 'react-feather';
+import { Search, ShoppingCart, X, AtSign } from 'react-feather';
  
 const icons = {
     'search': Search,
     'shopping-card': ShoppingCart,
+    'delete': X,
     'at-sign': AtSign
 };
 

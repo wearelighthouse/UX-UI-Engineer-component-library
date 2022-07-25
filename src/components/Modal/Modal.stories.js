@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Modal from './Modal';
@@ -18,8 +18,8 @@ const ShowModal = () => {
     return (
         <>
             <Button onClick={() => handleClick()} variant="primary" size="lg">Open Modal</Button>
-            <div className={`modal ${isShow ? 'active' : ''}`}>
-                <div className="modal__content">
+            <div onClick={() => handleClick()} className={`modal ${isShow ? 'active' : ''}`}>
+                <div onClick={e => e.stopPropagation()} className="modal__content">
                     <div className="close__modal">
                         <button className="x-close" onClick={handleClick}>
                             <div style={{width: '24px', height: '24px'}}>
