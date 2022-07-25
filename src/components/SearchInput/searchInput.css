@@ -1,0 +1,41 @@
+.wrapper {
+    position: relative;
+    width: max-content;
+    color: hsl(0deg 0% 50%);
+}
+
+.span {
+    display: none;
+}
+
+.icon-wrapper {
+    position: absolute;
+    left: 0;
+    margin: auto;
+    padding-left: 0.5rem;
+}
+
+.input-element {
+    outline: none;
+    border: none;
+    font-weight: 700;
+    color: hsl(0deg 0% 40%);
+    background: transparent;
+    border-radius: 4px;
+}
+.input-element::placeholder {
+    font-weight: 400;
+    color: hsl(0deg 0% 50%);
+}
+
+.input-element:hover {
+    color: #000000;
+}
+
+.input-element:focus {
+    border: 2px solid #000000;
+}
+
+.input-element_outline {
+    border: 2px solid gray;
+}

@@ -3,6 +3,7 @@ import Button from "./components/Button/Button";
 import Icon from "./components/Icon/Icon";
 import Modal from "./components/Modal/Modal";
 import Paragraph from "./components/Paragraph/Paragraph";
+import SearchInput from "./components/SearchInput/SearchInput";
 
 function App() {
   const [isShow, setisShow] = useState(false);
@@ -19,6 +20,9 @@ function App() {
       </h1>
     </header>
     <main>
+      <div className="search-input">
+        <SearchInput placeholder='Search…' label='Search Input with icon' icon='search' size='lg' onChange={() => console.log('Search Input')} />
+      </div>
       <div className="button-container">
         <Button size='lg' variant='text' disabled={false} onClick={() => console.log('Text button')}>Text button</Button>
         <Button size='lg' variant='primary' disabled={false} onClick={() => console.log('Primary button')}>Primary button</Button>

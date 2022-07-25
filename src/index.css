@@ -1,7 +1,21 @@
-.button-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
+.search-input {
+  margin-bottom: 4rem;
 }
+
+.header {
+    background-color: yellow;
+    padding: 2rem;
+    border: 2px solid red;
+    margin: 1rem
+}
+
+-p.header {
+      color: red;
+      font-size: 3rem;
+    }
+
+-button.header {
+      padding: 2rem;
+      background-color: brown;
+    }
+  

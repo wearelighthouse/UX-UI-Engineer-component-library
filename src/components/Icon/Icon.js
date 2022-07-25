@@ -4,7 +4,7 @@ import { Search, ShoppingCart, Delete, X } from 'react-feather';
 const icons = {
     'search': Search,
     'shopping-card': ShoppingCart,
-    'delete': X
+    'at-sign': AtSign
 };
 
 const Icon = ({ id, size, strokeWidth = 1, ...delegated }) => {
