@@ -1,0 +1,50 @@
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+    padding: 16px;
+}
+
+.card-link:hover {
+    box-shadow: 0 2px 16px rgb(0 0 0 / 14%);
+}
+
+.card-link {
+    color: currentColor;
+    text-decoration: none;
+    box-shadow: 0 1px 10px rgb(0 0 0 / 8%);
+    transition: box-shadow .2s;
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.card-link:focus, .button-links button:focus {
+    outline-offset: .2rem;
+    outline-style: dotted;
+}
+
+.card p, .card h2 {
+    margin: 0;
+}
+
+.card p {
+    padding: 1.5rem 0rem;
+}
+
+.card-link:hover .card h2 {
+    text-decoration: underline;
+}
+
+.button-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -6,8 +6,6 @@ export default {
     Component: Paragraph
 }
 
-
-
 const Template = (args) => <Paragraph {...args} />
 
 export const FirstParagraph = Template.bind({});
