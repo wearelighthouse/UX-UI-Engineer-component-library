@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -8,31 +10,25 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/preset-create-react-app",
+    {
+      name: "@storybook/addon-docs",
+      options: {
+        configureJSX: true,
+      },
+    },
   ],
-  "framework": "@storybook/react",
+  "framework": "@storybook/react",  
   "core": {
     "builder": "@storybook/builder-webpack5"
   },
+  webpackFinal: async (config, { configType }) => {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader'],
+      include: path.resolve(__dirname, '../'),
+    });
+    // Return the altered config
+    return config;
+  }
 }
-// webpackFinal: async config => {
-//   config.module.rules.push({
-//    test: /\.scss$/,
-//     use: [
-//       'style-loader',
-//       'css-loader',
-//       {
-//         loader: 'postcss-loader',
-//         options: {
-//           ident: 'postcss',
-//           plugins: [require('postcss-import')],
-//         },
-//       },
-//     ],
-//     include: __dirname,
-//   });
-//   config.resolve.modules.push(process.cwd() + '/node_modules');
-//   config.resolve.modules.push(process.cwd() + '/src');
-//   config.resolve.symlinks = false;
-  
-//   return config.resolve;
-// },
+
